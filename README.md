@@ -5,7 +5,7 @@
 
 - Pi-Hole - Block Ads in Home Network
 - Portainer - Manage containers 
-- Dashy - Dashboard for Homelab
+- Dashy - Dashboard for Homelab. Alternatives are Homer and Heimdall
 - Grafana - Dashboard for metrics monitoring
 - InfluxDB - Time Series Database
 - Redis - Caching

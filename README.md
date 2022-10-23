@@ -7,7 +7,8 @@
 - Portainer - Manage containers 
 - Dashy - Dashboard for Homelab. Alternatives are Homer and Heimdall
 - Grafana - Dashboard for metrics monitoring
-- InfluxDB - Time Series Database
+- InfluxDb - Time Series Database
+- Telegraf - Metrics collection to push to InfluxDb
 - Redis - Caching
 - RabbitMQ - Message Queue
 - MQTT - Message Queue for IoT devices

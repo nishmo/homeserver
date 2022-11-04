@@ -4,8 +4,8 @@
 
 
 - Pi-Hole - Block Ads in Home Network
-- Portainer - Manage containers 
-- Dashy - Dashboard for Homelab. Alternatives are Homer and Heimdall
+- [x] Portainer - Manage containers 
+- [x] Dashy - Dashboard for Homelab. Alternatives are Homer and Heimdall
 - Grafana - Dashboard for metrics monitoring
 - InfluxDb - Time Series Database
 - Telegraf - Metrics collection to push to InfluxDb
@@ -14,7 +14,6 @@
 - MQTT - Message Queue for IoT devices
 - JellyFin - Media Server. Apparently its better than Plex as per Internet
 - FileServer - File Server
-- Node-Red - For IoT workflows especially around NFC
+- [x] Node-Red - For IoT workflows especially around NFC
 - Home Assistant - Home Assistant and Home Automation
 - Jessie/FreqTrade - Either one of them for Automated Crypto Trading
-- Uptime Kuma - Monitoring all the tools in this list and any other new tools that get added

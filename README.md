@@ -3,7 +3,7 @@
 ## Automation, Sandbox, IoT, FileShare, Media Server, Monitoring etc
 
 
-- Pi-Hole - Block Ads in Home Network
+- [x] Pi-Hole - Block Ads in Home Network
 - [x] Portainer - Manage containers 
 - [x] Dashy - Dashboard for Homelab. Alternatives are Homer and Heimdall
 - [x] Grafana - Dashboard for metrics monitoring
@@ -18,4 +18,4 @@
 - Home Assistant - Home Assistant and Home Automation
 - Jessie/FreqTrade - Either one of them for Automated Crypto Trading
 
-### 7/14 - Done
+### 8/14 - Done

@@ -28,7 +28,6 @@ services:
       - 4000:80
     networks:
       - home-network
-    # Configure healthchecks
     healthcheck:
       test: ['CMD', 'node', '/app/services/healthcheck']
       interval: 1m30s
@@ -39,6 +38,7 @@ services:
   node-red:
     image: nodered/node-red:latest
     container_name: node-red
+    restart: unless-stopped
     env_file:
       - ./dashy/.env
     volumes:
@@ -47,7 +47,68 @@ services:
       - 1880:1880
     networks:
       - home-network
+  
+  influxdb:
+    image: influxdb:alpine
+    container_name: influxdb
+    restart: always
+    volumes:
+      - ./influxdb/data:/var/lib/influxdb2
+      - ./influxdb/config:/etc/influxdb2
+    env_file:
+      - ./influxdb/.env
+    ports:
+      - '8086:8086'
+    networks:
+      - home-network 
+  
+  telegraf:
+    image: telegraf:alpine
+    container_name: telegraf
+    restart: always
+    volumes:
+    - ./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+    depends_on:
+      - influxdb
+    links:
+      - influxdb
+    ports:
+    - '8125:8125'
+    networks:
+      - home-network
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    restart: always
+    volumes:
+      - ./grafana/data:/var/lib/grafana
+    depends_on:
+      - influxdb
+    env_file:
+      - ./grafana/.env
+    links:
+      - influxdb
+    ports:
+      - '3000:3000'
+    networks:
+      - home-network
+
+  rabbitmq:
+    image: rabbitmq:management-alpine
+    container_name: rabbitmq
+    volumes:
+        - ./rabbitmq/data/:/var/lib/rabbitmq/
+        - ./rabbitmq/log/:/var/log/rabbitmq
+    env_file:
+      - ./rabbitmq/.env
+    ports:
+        - 5672:5672
+        - 15672:15672
+    networks:
+        - home-network
 
 networks:
   home-network:
+    driver: bridge
     

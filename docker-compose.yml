@@ -165,6 +165,7 @@ services:
   
   redis:
     image: redis:alpine
+    container_name: redis
     restart: always
     volumes: 
       - ./redis/data:/data
@@ -173,6 +174,21 @@ services:
       - 6379:6379
     networks:
       - home-network
+  
+  freqtrade:
+    image: freqtradeorg/freqtrade:stable
+    container_name: freqtrade
+    restart: unless-stopped
+    volumes:
+      - "./freqtrade/user_data:/freqtrade/user_data"
+    ports:
+      - "1010:8080"
+    command: >
+      trade
+      --logfile /freqtrade/user_data/logs/freqtrade.log
+      --db-url sqlite:////freqtrade/user_data/tradesv3.sqlite
+      --config /freqtrade/user_data/config.json
+      --strategy SampleStrategy
 
 networks:
   home-network:

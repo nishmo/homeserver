@@ -17,6 +17,6 @@
 - [x] Node-Red - For IoT workflows especially around NFC
 - Home Assistant - Home Assistant and Home Automation
 - [x] HomeBox - Home Inventory Management System
-- Jessie/FreqTrade - Either one of them for Automated Crypto Trading
+- [x] Jessie/FreqTrade - Either one of them for Automated Crypto Trading
 
-### 10/15 - Done
+### 11/15 - Done

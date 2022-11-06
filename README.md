@@ -9,13 +9,14 @@
 - [x] Grafana - Dashboard for metrics monitoring
 - [x] InfluxDb - Time Series Database
 - [x] Telegraf - Metrics collection to push to InfluxDb
-- Redis - Caching
+- [x] Redis - Caching
 - [x] RabbitMQ - Message Queue
 - MQTT - Message Queue for IoT devices
-- JellyFin - Media Server. Apparently its better than Plex as per Internet
+- [x] JellyFin - Media Server. Apparently its better than Plex as per Internet
 - FileServer - File Server
 - [x] Node-Red - For IoT workflows especially around NFC
 - Home Assistant - Home Assistant and Home Automation
+- [x] HomeBox - Home Inventory Management System
 - Jessie/FreqTrade - Either one of them for Automated Crypto Trading
 
-### 8/14 - Done
+### 10/15 - Done

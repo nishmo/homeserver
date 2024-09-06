@@ -101,7 +101,7 @@ services:
     container_name: excalidraw
     restart: always
     ports:
-      - "3000:3000"
+      - "3000:80"
   
   it-tools:
     image: corentinth/it-tools:latest
